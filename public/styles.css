@@ -1,0 +1,219 @@
+/*veremos 3 tipos de selectores por ejemplo h1 es un selector de tipo, esta el selector class 
+para llamar del html las class y los id al css se hace asi: 
+id     se utiliza la #
+class   se utiliza el . 
+
+pagina para ver propiedades y tipografias de css https://cssreference.io/ */
+
+
+
+/*trabajaremos con 3 display 1. display "block" 2. display "inline"
+3. display "inline - block"*/
+/* el label es de tipo inline no toma el width ni el height*/
+
+/*label {    
+    background-color: silver;
+    width:20px;    
+    height:17px;
+}
+
+input {
+    background-color: aqua;
+    width:20px;    
+    height:17px;
+}
+
+button {
+    background-color:orange;
+    width:89px;    
+    height:27px;
+}
+*/
+
+/*CSS FLEXBOK herramienta para alinear elementos y posicionarlos en la web  (contenedores y elementos hijos)
+revisar pagina css-tricks.com */
+
+/*con Flex-box solamente podemos ubicar nuestros elementos en columnas o filas*/
+
+/*CSS grid no solamente se pueden organizar nuestros elementos en columnas y filas si no que tambien en ambos sentidos al mismo tiempo */
+
+
+/*mediaquery se escriben en el css con @media() nos ayuda a organizar nustra pagina o codigo tanto en dispositivos grandes como en dispositivos pequeños*/
+
+/* "las Pseudo clases" son acciones del usuario y para visualizar
+mujer lo que hemos seleccionado y se usan con : al inicio de la funcion ej
+:hover  ,  :active ,  :checked
+*/
+
+/*paleta de colores https://colorhunt.co/palettes/blue */
+
+/*API = Application programming interface*/
+/*la terminal es una herramienta que nos permite realizar tareas y funciones sin interfaz grafica solamente ejecutando comando*/
+/*Express JS es una libreria de las mas utilizadas para todo lo que tiene que ver con desarrollo del backend nos permite crear servidores web con pocas lineas de codigo*/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:wght@300&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #041562;
+    user-select: none;
+
+}
+
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: yellow;
+    font-size: 60px;
+    font-family: 'Fredoka', sans-serif;
+    /*width:293px;    /*width = ancho*/
+    /*height:50px;    /*height = alto*/
+    /*background-color: teal;  /*color de fondo*/
+}
+
+.subtitulo{
+    color: yellow;
+    font-size: 28px;
+
+}
+
+.tarjetas, .tarjetas-ataques {
+    display: flex;
+    gap: 10px;
+}
+
+.tarjeta-de-mokepon {
+    width: 160px;
+    height: 100px;
+    background: silver;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid orange;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+}
+
+.tarjeta-de-mokepon img {
+    width: 80px;
+    
+}
+
+#boton-mascota {
+    width: 160px;
+    height: 36px;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top:30px ;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    background-color: #5D8BF4;  
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque {
+    background-color: #0633fc;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 80px;
+    color: white;
+    font-family: 'Poppins', sans-serif;    
+}
+
+#mensajes {
+    width: 280px;
+    background: #EEEEEE;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+#boton-reiniciar {
+    border: none;
+    color: #0633fc;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*https://css-tricks.com/snippets/css/complete-guide-grid/  */
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    color: white
+}
+
+#vidas-jugador, #vidas-enemigo {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+
+.ataques-jugador, .ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button {
+    width: 80px;
+    height: 36px;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin:10px 0 ;
+}
+
+
+
+/* el max-width nos dice que hasta que tamaño veremos nuestra pagina en dispositivos pequeños */
+@media (max-width: 560px) {
+    .tarjetas, .tarjetas-ataques {
+        flex-direction: column; 
+    }
+   }
+
+   @media (max-width: 300px) {
+    #ver-mapa div{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+   }
